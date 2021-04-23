@@ -1,10 +1,19 @@
 from flask import Flask, render_template, abort
+import json
+#import os
+
 app = Flask(__name__)
-import os
 
 @app.route('/')
 def pagina_principal():
     return render_template("pagina.html")
 
-port=os.environ["PORT"]
-app.run('0.0.0.0',int(port), debug=True)
+@app.route('/libro/<isbn>')
+def pagina_detalle_libro(titulo,imagen):
+    with open("libros.json") as fichero:
+        doc = json.load(fichero)
+    if isbn != doc[0]['title']
+
+
+#port=os.environ["PORT"]
+app.run(debug=True)
