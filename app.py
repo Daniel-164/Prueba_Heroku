@@ -12,8 +12,8 @@ def pagina_principal():
 def pagina_detalle_libro(titulo,imagen):
     with open("libros.json") as fichero:
         doc = json.load(fichero)
-    if isbn != doc[0]['title']
-
+#if isbn != doc[0]['isbn']:
+    return render_template("detalle.html")
 
 #port=os.environ["PORT"]
 app.run(debug=True)
