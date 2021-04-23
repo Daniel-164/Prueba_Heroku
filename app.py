@@ -9,6 +9,8 @@ def pagina_principal():
 
 @app.route('/libro/<int:isbn>')
 def pagina_detalle_libro(isbn):
-    return render_template("detalle.html")
+    with open("books.json") as fichero:
+        doc = json.load(fichero)
+    return render_template("detalle.html",diccionario_libros=doc)
 
 app.run(debug=True)
