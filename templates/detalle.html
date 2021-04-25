@@ -15,9 +15,17 @@
         <h3>Descripción larga:</h3>
         <p>{{descripcionlarga}}</p>
         <h3>Autores:</h3>
-        <p>{{autores}}</p>
+        <p>
+            {% for a in autores -%}
+                <li>{{a}}</li>
+            {% endfor -%}
+        </p>
         <h3>Categorías:</h3>
-        <p>{{categorias}}</p>
+        <p>
+            {% for c in categorias -%}
+                <li>{{c}}</li>
+            {% endfor -%}
+        </p>
         <a href="/">Página principal</a>
     </body>
 </html>
