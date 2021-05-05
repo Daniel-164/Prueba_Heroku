@@ -9,21 +9,21 @@
         <h2>{{titulo}}</h2>
         <img src="{{imagen}}"></img>
         <h3>Número de páginas:</h3>
-        <p>{{numpaginas}}</p>
+        <p>{{i.numpaginas}}</p>
         <h3>Descripción corta:</h3>
-        <p>{{descripcioncorta}}</p>
+        <p>{{i.descripcioncorta}}</p>
         <h3>Descripción larga:</h3>
-        <p>{{descripcionlarga}}</p>
+        <p>{{i.descripcionlarga}}</p>
         <h3>Autores:</h3>
         <p>
             {% for a in autores -%}
-                <li>{{a}}</li>
+                <li>{{i.a}}</li>
             {% endfor -%}
         </p>
         <h3>Categorías:</h3>
         <p>
             {% for c in categorias -%}
-                <li>{{c}}</li>
+                <li>{{i.c}}</li>
             {% endfor -%}
         </p>
         <a href="/">Página principal</a>
