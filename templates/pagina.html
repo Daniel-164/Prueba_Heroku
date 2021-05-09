@@ -7,8 +7,10 @@
     <body>
         <h1>Daniel Pérez Gallo</h1>
         <h2>Biblioteca</h2>
+        <ul>
         {% for d in documento -%}
-            <a href="/libro/{{d.isbn}}">Página detalle del libro</a>
+            <li><a href="/libro/{{d.isbn}}">{{d.title}}</a></li>
         {% endfor -%}
+        </ul>
     </body>
 </html>
