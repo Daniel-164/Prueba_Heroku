@@ -26,6 +26,9 @@
                 <li>{{c}}</li>
             {% endfor -%}
         </ul>
+        {%if i.status=="MEAP"%}-
+        <p>ESTE LIBRO NO SE HA PUBLICADO</p>
+        {% endif %}
         <a href="/">Página principal</a>
     </body>
 </html>
