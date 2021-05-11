@@ -13,7 +13,7 @@ def pagina_principal():
 @app.route('/libro/<isbn>')
 def pagina_detalle_libro(isbn):
     for i in doc:
-        if i["isbn"]==isbn:
+        if i.get("isbn")==isbn:
             return render_template("detalle.html",i=i)
     abort(404)
 app.run(debug=True)
