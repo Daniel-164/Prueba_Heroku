@@ -1,5 +1,6 @@
 from flask import Flask, render_template, abort
 import json
+import os
 
 app = Flask(__name__)
 
@@ -16,4 +17,6 @@ def pagina_detalle_libro(isbn):
         if i.get("isbn")==isbn:
             return render_template("detalle.html",i=i)
     abort(404)
-app.run(debug=True)
+
+port=os.environ["PORT"]
+app.run('0.0.0.0',int(port), debug=False)
