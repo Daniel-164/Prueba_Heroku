@@ -6,26 +6,29 @@
     </head>
     <body>
         <h1>Página detalle del libro</h1>
-        <h2>{{titulo}}</h2>
-        <img src="{{imagen}}"></img>
+        <h2>{{i.title}}</h2>
+        <img src={{i.thumbnailUrl}}></img>
         <h3>Número de páginas:</h3>
-        <p>{{i.numpaginas}}</p>
+        <p>{{i.pageCount}}</p>
         <h3>Descripción corta:</h3>
-        <p>{{i.descripcioncorta}}</p>
+        <p>{{i.shortDescription}}</p>
         <h3>Descripción larga:</h3>
-        <p>{{i.descripcionlarga}}</p>
+        <p>{{i.longDescription}}</p>
         <h3>Autores:</h3>
-        <p>
-            {% for a in autores -%}
-                <li>{{i.a}}</li>
+        <ul>
+            {% for a in i.authors -%}
+                <li>{{a}}</li>
             {% endfor -%}
-        </p>
+        </ul>
         <h3>Categorías:</h3>
-        <p>
-            {% for c in categorias -%}
-                <li>{{i.c}}</li>
+        <ul>
+            {% for c in i.categories -%}
+                <li>{{c}}</li>
             {% endfor -%}
-        </p>
+        </ul>
+        {%if i.status=="MEAP"%}-
+        <p>ESTE LIBRO NO SE HA PUBLICADO</p>
+        {% endif %}
         <a href="/">Página principal</a>
     </body>
 </html>

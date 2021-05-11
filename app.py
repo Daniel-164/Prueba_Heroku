@@ -14,6 +14,6 @@ def pagina_principal():
 def pagina_detalle_libro(isbn):
     for i in doc:
         if i["isbn"]==isbn:
-            return render_template("detalle.html",i=i,isbn=doc[0]["isbn"],titulo=doc[0]["title"],imagen=doc[0]["thumbnailUrl"],numpaginas=doc[0]["pageCount"],descripcioncorta=doc[0]["shortDescription"],descripcionlarga=doc[0]["longDescription"],autores=doc[0]["authors"],categorias=doc[0]["categories"])
+            return render_template("detalle.html",i=i)
     abort(404)
 app.run(debug=True)
