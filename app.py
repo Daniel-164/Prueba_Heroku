@@ -15,7 +15,7 @@ def pagina_principal():
 def pagina_detalle_libro(isbn):
     for i in doc:
         if i.get("isbn")==isbn:
-            return render_template("detalle.html",i=i)
+            return render_template("detall.html",i=i)
     abort(404)
 
 port=os.environ["PORT"]
